@@ -1,0 +1,36 @@
+.cart {
+    &__img {
+        width: 70px;
+        height: 70px;;
+    }
+    &__info {
+        margin-left: 21px;
+        margin-right: 12px;
+    }
+    &__name {
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    &__price {
+        font-weight: 700;
+        font-size: 14px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        border: 1px solid #F3F3F3;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 20px 20px 30px 20px;
+        margin-bottom: 20px;
+    }
+
+    svg {
+        cursor: pointer;
+        transition: 0.1s ;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

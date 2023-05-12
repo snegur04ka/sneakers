@@ -1,0 +1,61 @@
+.catalog {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+
+        h2 {
+            font-weight: 700;
+            font-size: 32px;
+            color: #000000;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            border: 1px solid #F3F3F3;
+            border-radius: 10px;
+            padding: 15px 18px;
+
+            svg {
+                margin-right: 14px;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                font-weight: 400;
+                font-size: 14px;
+                color: #C4C4C4;
+            }
+        }
+    }
+}
+
+.skeleton {
+    margin-top: 40px;
+    animation: skeleton 1.5s alternate linear infinite;
+    opacity: 1;
+}
+
+@keyframes skeleton {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+    opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}

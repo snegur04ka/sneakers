@@ -1,0 +1,112 @@
+.overlay {
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    
+    &.active {
+        display: block;
+    }
+}
+.drawer {
+    position: absolute;
+    right: 0;
+    background: #fff;
+    height: 100%;
+    width: 385px;
+    top: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    &__content {
+        flex: 1;
+        overflow: auto ;
+        margin-bottom: 30px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        h2 {
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+        }
+
+        svg {
+            cursor: pointer;
+            transition: 0.3s ;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+    &__total {
+        margin-bottom: 19px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .price {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        div {
+            flex: 1;
+            border: 1px dashed #DFDFDF;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #9DD558;
+        border-radius: 18px;
+        border: none;
+        font-weight: 600;
+        font-size: 16px;
+        color: #FFFFFF;
+        width: 100%;
+        padding: 18px 0;
+        position: relative;
+        margin-top: 24px;
+        border: 1px solid white;
+        transition: all .5s ease;
+        svg { 
+            position: absolute;
+            right: 35px;
+            top: 20px;
+            transition: all .5s ease;
+        }
+        &:hover {
+            border: 1px solid #9DD558;
+            background: white;
+            color: #9DD558;
+            svg {
+                fill: #9DD558;
+
+                path {
+                    stroke: #9DD558;
+                }
+            }
+        }
+    }
+
+    &__bottom.active {
+        display: none;
+    }
+}
